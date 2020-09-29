@@ -17,11 +17,8 @@ public class Supervisor {
 	private Integer idCliente;
 	
 	@Size(min = 3, message = "Nombres debe tener mínimo 3 caracteres")
-	@Column(name = "nombre", nullable = false, length = 70)
-	private String nombre;
-	
-	@Column(name = "supervisor", nullable = false, length = 200)
-	private String supervisor;
+	@Column(name = "nombre_supervisor", nullable = false, length = 70)
+	private String nombreSupervisor;
 	
 	@Size(min = 8, max = 150, message = "Dirección debe tener minimo 3 caracteres")
 	@Column(name = "direccion", nullable = false, length = 150)
@@ -39,20 +36,12 @@ public class Supervisor {
 		this.idCliente = idCliente;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getNombreSupervisor() {
+		return nombreSupervisor;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getSupervisor() {
-		return supervisor;
-	}
-
-	public void setSupervisor(String supervisor) {
-		this.supervisor = supervisor;
+	public void setNombreSupervisor(String nombreSupervisor) {
+		this.nombreSupervisor = nombreSupervisor;
 	}
 
 	public String getDireccion() {

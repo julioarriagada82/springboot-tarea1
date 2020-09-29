@@ -31,8 +31,8 @@ public class Producto {
 	@Column(name = "valor", nullable = false)
 	private Integer valor;
 	
-	@Column(name = "producto", nullable = false, length = 200)
-	private String producto;
+	@Column(name = "nombre_producto", nullable = false, length = 200)
+	private String nombreProducto;
 
 	public Integer getIdProducto() {
 		return idProducto;
@@ -40,6 +40,14 @@ public class Producto {
 
 	public void setIdProducto(Integer idProducto) {
 		this.idProducto = idProducto;
+	}
+
+	public Marca getMarca() {
+		return marca;
+	}
+
+	public void setMarca(Marca marca) {
+		this.marca = marca;
 	}
 
 	public String getDescripcion() {
@@ -58,19 +66,11 @@ public class Producto {
 		this.valor = valor;
 	}
 
-	public String getProducto() {
-		return producto;
+	public String getNombreProducto() {
+		return nombreProducto;
 	}
 
-	public void setProducto(String producto) {
-		this.producto = producto;
-	}
-
-	public Marca getMarca() {
-		return marca;
-	}
-
-	public void setMarca(Marca marca) {
-		this.marca = marca;
+	public void setNombreProducto(String nombreProducto) {
+		this.nombreProducto = nombreProducto;
 	}
 }

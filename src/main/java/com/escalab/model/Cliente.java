@@ -17,12 +17,9 @@ public class Cliente {
 	private Integer idCliente;
 	
 	@Size(min = 3, message = "Nombres debe tener mínimo 3 caracteres")
-	@Column(name = "nombre", nullable = false, length = 70)
-	private String nombre;
-	
-	@Column(name = "cliente", nullable = false, length = 200)
-	private String cliente;
-	
+	@Column(name = "nombre_cliente", nullable = false, length = 200)
+	private String nombreCliente;
+		
 	@Size(min = 8, max = 150, message = "Dirección debe tener minimo 3 caracteres")
 	@Column(name = "direccion", nullable = false, length = 150)
 	private String direccion;
@@ -39,20 +36,12 @@ public class Cliente {
 		this.idCliente = idCliente;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getNombreCliente() {
+		return nombreCliente;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(String cliente) {
-		this.cliente = cliente;
+	public void setNombreCliente(String nombreCliente) {
+		this.nombreCliente = nombreCliente;
 	}
 
 	public String getDireccion() {
