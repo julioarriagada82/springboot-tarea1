@@ -19,7 +19,7 @@ public class Vendedor {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idCliente;
+	private Integer idVendedor;
 	
 	@JsonIgnore
 	@ManyToOne
@@ -38,12 +38,12 @@ public class Vendedor {
 	@Column(name = "telefono", nullable = false, length = 9)
 	private String telefono;
 
-	public Integer getIdCliente() {
-		return idCliente;
+	public Integer getIdVendedor() {
+		return idVendedor;
 	}
 
-	public void setIdCliente(Integer idCliente) {
-		this.idCliente = idCliente;
+	public void setIdVendedor(Integer idVendedor) {
+		this.idVendedor = idVendedor;
 	}
 
 	public Supervisor getSupervisor() {
